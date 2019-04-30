@@ -37,7 +37,7 @@ int mangoTree::addMango(mangoFruit* m)
 	}
 
 	increaseCounter();
-	return 0;
+	return 5;
 }
 
 int mangoTree::insertMango(mangoFruit* m, int pos)
@@ -69,7 +69,7 @@ int mangoTree::insertMango(mangoFruit* m, int pos)
 		m->prev->next = m;
 		tmp->prev = m;
 		increaseCounter();
-		return 0;
+		return 1;
 	}
 
 	return -3;
