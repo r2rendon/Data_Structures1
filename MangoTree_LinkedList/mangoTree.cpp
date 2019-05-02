@@ -1,5 +1,4 @@
 #include "mangoTree.h"
-#include <string>
 
 mangoTree::mangoTree()
 {
@@ -54,18 +53,6 @@ int mangoTree::insertMango(mangoFruit* m, int pos)
 		this->addMango(m);
 		return 0;
 	}
-	else if (pos == 1)
-	{
-		mangoFruit* tmp = this->first;
-
-		m->prev = nullptr;
-		m->next = tmp;
-		tmp->prev = m;
-		this->first = m;
-		increaseCounter();
-
-		return 1;
-	}
 	else if(pos <= this->getCounter())
 	{
 		mangoFruit* tmp = this->first;
@@ -82,7 +69,7 @@ int mangoTree::insertMango(mangoFruit* m, int pos)
 		m->prev->next = m;
 		tmp->prev = m;
 		increaseCounter();
-		return 2;
+		return 1;
 	}
 
 	return -3;
@@ -127,17 +114,5 @@ int mangoTree::deleteMango(int pos)
 		decreaseCounter();
 		return 0;
 	}// Delete's if
-
-}
-
-void mangoTree::printMangoTree()
-{
-	mangoFruit* tmp = this->first;
-
-	while (tmp != nullptr)
-	{
-		cout << "["+to_string(tmp->getWeight())+"] ";
-		tmp = tmp->next;
-	}
 
 }

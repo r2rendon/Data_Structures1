@@ -17,8 +17,7 @@ int main()
 		cout << "\n\n1. Add a Mango Fruit to the tree";
 		cout << "\n2. Insert a Mango Fruit to the tree";
 		cout << "\n3. Delete a Mango Fruit from the tree";
-		cout << "\n4. Print Mango Tree";
-		cout << "\n5. Exit";
+		cout << "\n4. Exit";
 
 		cout << "\n\nPlease type the desired option: ";
 		cin >> option;
@@ -27,7 +26,7 @@ int main()
 		{
 		case 1:
 		{
-			cout << "\n-> Add Mango <-";
+			cout << "-> Add Mango <-";
 			cout << "\nInsert the weight of the mango to insert: ";
 			cin >> weight;
 
@@ -43,7 +42,7 @@ int main()
 
 		case 2:
 		{
-			cout << "\n-> Insert Mango <-";
+			cout << "-> Insert Mango <-";
 			cout << "\nInsert the weight of the mango to insert: ";
 			cin >> weight;
 
@@ -72,10 +71,6 @@ int main()
 				break;
 
 			case 1:
-				cout << "\t\tMango inserted in the first position!!";
-				break;
-
-			case 2:
 				cout << "\t\tMango inserted successfully";
 				break;
 
@@ -87,37 +82,10 @@ int main()
 			break;
 
 		case 3:
-			cout << "\n-> Delete Mango <-";
-			cout << "\nInsert the position of the mango to delete: ";
-			cin >> pos;
-
-			test = mTree.deleteMango(pos);
-
-			switch (test)
-			{
-			case -1:
-				cout << "\t\tThe position inserted is greater than the tree's size.";
-				break;
-
-			case -2:
-				cout << "\t\tThe position inserted is less than the tree's minimum position.";
-				break;
-
-			case 0:
-				cout << "\t\tMango deleted successfully!!!";
-				break;
-			default:
-				break;
-			}
 
 			break;
 
 		case 4:
-			cout << "\n->Print Mango Tree";
-			mTree.printMangoTree();
-			break;
-
-		case 5:
 			exit = true;
 			break;
 
@@ -129,5 +97,4 @@ int main()
 	}
 
 	system("pause");
-
 }
