@@ -16,6 +16,16 @@ int Queue::getCounter()
 	return this->counter;
 }
 
+void Queue::increaseCounter()
+{
+	this->counter++;
+}
+
+void Queue::decreaseCounter()
+{
+	this->counter--;
+}
+
 void Queue::cQueue(Car* newCar)
 {
 	newCar->next = nullptr;

@@ -6,10 +6,11 @@ Car::Car()
 	setPeople(0);
 }
 
-Car::Car(int p, carBrand cb)
+Car::Car(int p, carBrand cb, string d)
 {
 	setCarBrand(cb);
 	setPeople(p);
+	this->driver = d;
 }
 
 void Car::setCarBrand(carBrand cb)
@@ -31,6 +32,11 @@ void Car::setPeople(int p)
 int Car::getPeople()
 {
 	return this->cPeople;
+}
+
+string Car::getDriver()
+{
+	return this->driver;
 }
 
 Car::~Car()
